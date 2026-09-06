@@ -64,7 +64,7 @@ const copy = {
 };
 
 const weeks = [
-  [['01', '第一周'], ['待更新'], ['待更新'],
+  [['01', '第一周'], ['待更新'], ['待更新']]
 ];
 
 const ids = ['announcements', 'information', 'schedule', 'resources'];
