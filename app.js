@@ -6,18 +6,16 @@ const copy = {
     subtitle: '从线性方程组出发，理解向量空间、线性映射与矩阵背后的统一结构。',
     nav: ['课程公告', '课程信息', '教学安排', '课程资源'],
     facts: [
-  ['上课时间', '周二 9：45–11：20<br>周四 07：50–09：25'],
+  ['上课时间', '周二 9：45 – 11：20<br>周四 7：50 – 9：25'],
   ['上课地点', '5403'],
 ],
     announcementsTitle: '课程公告', announcementsKicker: 'Announcements',
     announcements: [
       ['09.01', '课程主页已上线', '讲义、作业与通知将随教学进度持续更新。'],
-      ['更新', '上课安排', '周二第3–4节 9：45–11：20，周四第1–2节 07：50–09：25；教室为 5403。'],
-    ],
     informationTitle: '课程信息', informationKicker: 'Course information',
     information: [
-      ['助教', '待填写'],  ['上课时间', '周二 9：45–11：20<br>周四 07：50–09：25'], ['上课地点', '5403'],
-      ['答疑时间', '待填写'], ['课程群', '待填写'], ['参考教材', '《线性代数》及课堂指定参考资料'],
+      ['助教', '江子恒 钱治文'],  ['上课时间', '周二 9：45–11：20<br>周四 07：50–09：25'], ['上课地点', '5403'],
+      ['答疑时间', '待更新'], ['参考教材', '《线性代数》及课堂指定参考资料'],
       ['考核方式', '平时成绩、期中考试与期末考试（比例待定）'],
     ],
     scheduleTitle: '教学安排', scheduleKicker: 'Weekly schedule',
@@ -66,22 +64,7 @@ const copy = {
 };
 
 const weeks = [
-  [['01', '第一周'], ['线性方程组', 'Systems of linear equations'], ['消元法 · 阶梯形矩阵', 'Elimination · echelon form']],
-  [['02', '第二周'], ['矩阵与矩阵运算', 'Matrices and operations'], ['矩阵乘法 · 逆矩阵', 'Products · inverses']],
-  [['03', '第三周'], ['行列式', 'Determinants'], ['展开 · 性质 · Cramer 法则', 'Expansion · properties · Cramer’s rule']],
-  [['04', '第四周'], ['向量空间', 'Vector spaces'], ['子空间 · 线性组合', 'Subspaces · linear combinations']],
-  [['05', '第五周'], ['线性相关与基', 'Independence and bases'], ['生成 · 基 · 维数', 'Span · bases · dimension']],
-  [['06', '第六周'], ['线性映射', 'Linear maps'], ['核 · 像 · 秩零化度定理', 'Kernel · image · rank–nullity']],
-  [['07', '第七周'], ['线性映射的矩阵', 'Matrices of linear maps'], ['坐标 · 基变换', 'Coordinates · change of basis']],
-  [['08', '第八周'], ['期中复习', 'Midterm review'], ['阶段总结 · 典型问题', 'Review · worked problems']],
-  [['09', '第九周'], ['特征值与特征向量', 'Eigenvalues and eigenvectors'], ['特征多项式 · 特征空间', 'Characteristic polynomial · eigenspaces']],
-  [['10', '第十周'], ['矩阵的相似与对角化', 'Similarity and diagonalization'], ['相似变换 · 可对角化条件', 'Similarity · diagonalizability']],
-  [['11', '第十一周'], ['内积空间', 'Inner product spaces'], ['正交 · 范数 · Gram–Schmidt', 'Orthogonality · norm · Gram–Schmidt']],
-  [['12', '第十二周'], ['正交投影', 'Orthogonal projection'], ['最小二乘 · 正交补', 'Least squares · orthogonal complements']],
-  [['13', '第十三周'], ['实对称矩阵', 'Real symmetric matrices'], ['正交对角化 · 谱定理', 'Orthogonal diagonalization · spectral theorem']],
-  [['14', '第十四周'], ['二次型', 'Quadratic forms'], ['标准形 · 正定性', 'Canonical form · definiteness']],
-  [['15', '第十五周'], ['综合应用', 'Applications'], ['模型 · 计算 · 结构', 'Models · computation · structure']],
-  [['16', '第十六周'], ['课程总结', 'Course review'], ['知识网络 · 期末复习', 'Concept map · final review']],
+  [['01', '第一周'], ['待更新'], ['待更新'],
 ];
 
 const ids = ['announcements', 'information', 'schedule', 'resources'];
