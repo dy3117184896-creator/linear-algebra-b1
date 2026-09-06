@@ -6,16 +6,16 @@ const copy = {
     subtitle: '从线性方程组出发，理解向量空间、线性映射与矩阵背后的统一结构。',
     nav: ['课程公告', '课程信息', '教学安排', '课程资源'],
     facts: [
-  ['上课时间', '周二 9：45 – 11：20<br>周四 7：50 – 9：25'],
-  ['上课地点', '5403'],
-],
+      ['上课时间', '周二 9：45 – 11：20<br>周四 7：50 – 9：25'],
+      ['上课地点', '5403'],
+    ],
     announcementsTitle: '课程公告', announcementsKicker: 'Announcements',
     announcements: [
       ['09.01', '课程主页已上线', '讲义、作业与通知将随教学进度持续更新。'],
     ],
     informationTitle: '课程信息', informationKicker: 'Course information',
     information: [
-      ['助教', '江子恒 钱治文'],  ['上课时间', '周二 9：45–11：20<br>周四 07：50–09：25'], ['上课地点', '5403'],
+      ['助教', '江子恒 钱治文'], ['上课时间', '周二 9：45–11：20<br>周四 07：50–09：25'], ['上课地点', '5403'],
       ['答疑时间', '待更新'], ['参考教材', '《线性代数》及课堂指定参考资料'],
       ['考核方式', '平时成绩、期中考试与期末考试（比例待定）'],
     ],
@@ -32,36 +32,6 @@ const copy = {
     footer: '线性代数 B1 · 2026 秋季学期', backTop: '回到顶部 ↑', placeholder: '待上传',
     update: '最近更新：2026 年 9 月',
   },
-  en: {
-    brand: 'School of Mathematical Sciences · USTC',
-    eyebrow: 'Fall 2026 · Course page', title: 'Linear Algebra B1',
-    subtitle: 'From systems of equations to the shared structure behind vector spaces, linear maps, and matrices.',
-    nav: ['Announcements', 'Information', 'Schedule', 'Resources'],
-    facts: [['Class time', 'Tue. periods 3–4, 9:45–11:20; Thu. periods 1–2, 07:50–09:25'], ['Location', 'Room 5403']],
-    announcementsTitle: 'Announcements', announcementsKicker: 'Course updates',
-    announcements: [
-      ['SEP 01', 'Course page is live', 'Notes, homework, and announcements will be added throughout the semester.'],
-      ['UPDATE', 'Class schedule', 'Tue. periods 3–4, 9:45–11:20; Thu. periods 1–2, 07:50–09:25; Room 5403.'],
-    ],
-    informationTitle: 'Course information', informationKicker: 'At a glance',
-    information: [
-      ['Teaching assistant', 'To be announced'], ['Class time', 'Tue. periods 3–4, 9:45–11:20; Thu. periods 1–2, 07:50–09:25'],
-      ['Location', 'Room 5403'], ['Office hours', 'To be announced'], ['Course group', 'To be announced'],
-      ['Textbook', 'Linear Algebra and references assigned in class'], ['Assessment', 'Coursework, midterm, and final (weights TBD)'],
-    ],
-    scheduleTitle: 'Weekly schedule', scheduleKicker: 'Course roadmap',
-    scheduleIntro: 'This is a preliminary outline. The pace will be adjusted as the course proceeds.',
-    headers: ['Week', 'Topic', 'Keywords', 'Notes', 'Homework'],
-    resourceTitle: 'Course resources', resourceKicker: 'Materials',
-    resources: [
-      ['Lecture notes', '讲义', 'Weekly notes and supplementary material', 'Coming soon'],
-      ['Problem sets', '作业', 'Problems, due dates, and submission details', 'Coming soon'],
-      ['Recitations', '习题课', 'Recitation notes and worked examples', 'Coming soon'],
-      ['Exams', '考试资料', 'Schedule, scope, and past papers', 'Coming soon'],
-    ],
-    footer: 'Linear Algebra B1 · Fall 2026', backTop: 'Back to top ↑', placeholder: 'Coming soon',
-    update: 'Last updated: September 2026',
-  },
 };
 
 const weeks = [
@@ -71,11 +41,11 @@ const weeks = [
 const ids = ['announcements', 'information', 'schedule', 'resources'];
 const heading = (kicker, title) => `<div class="section-heading"><span class="section-index" aria-hidden="true"></span><div><p>${kicker}</p><h2>${title}</h2></div></div>`;
 
-function render(lang) {
-  const t = copy[lang];
-  const idx = lang === 'zh' ? 0 : 1;
-  document.documentElement.lang = lang === 'zh' ? 'zh-CN' : 'en';
-  document.title = lang === 'zh' ? '线性代数 B1｜2026 秋季学期' : 'Linear Algebra B1 | Fall 2026';
+function render() {
+  const t = copy.zh;
+  const idx = 0;
+  document.documentElement.lang = 'zh-CN';
+  document.title = '线性代数 B1｜2026 秋季学期';
   document.getElementById('app').innerHTML = `
     <main id="top">
       <header class="hero">
@@ -83,10 +53,6 @@ function render(lang) {
         <div class="site-shell">
           <div class="topbar">
             <a class="brand" href="#top" aria-label="${t.title}"><span class="brand-mark">LA</span><span>${t.brand}</span></a>
-            <div class="language-switch" aria-label="Language">
-              <button data-lang="zh" class="${lang === 'zh' ? 'active' : ''}">中文</button>
-              <button data-lang="en" class="${lang === 'en' ? 'active' : ''}">EN</button>
-            </div>
           </div>
           <div class="hero-grid">
             <div class="hero-copy">
@@ -113,7 +79,7 @@ function render(lang) {
         <section id="schedule" class="section-card schedule-section">
           <div class="section-title-row">${heading(t.scheduleKicker, t.scheduleTitle)}<p>${t.scheduleIntro}</p></div>
           <div class="table-wrap"><table><thead><tr>${t.headers.map(h => `<th>${h}</th>`).join('')}</tr></thead>
-          <tbody>${weeks.map(w => `<tr><td><b>${w[0][0]}</b><span>${idx === 0 ? w[0][1] : `Week ${w[0][0]}`}</span></td><td>${w[1][idx]}</td><td>${w[2][idx]}</td><td><span class="status">${t.placeholder}</span></td><td><span class="status">${t.placeholder}</span></td></tr>`).join('')}</tbody></table></div>
+          <tbody>${weeks.map(w => `<tr><td><b>${w[0][0]}</b><span>${w[0][1]}</span></td><td>${w[1][idx]}</td><td>${w[2][idx]}</td><td><span class="status">${t.placeholder}</span></td><td><span class="status">${t.placeholder}</span></td></tr>`).join('')}</tbody></table></div>
         </section>
         <section id="resources" class="section-card">
           ${heading(t.resourceKicker, t.resourceTitle)}
@@ -122,10 +88,6 @@ function render(lang) {
         <footer><p>${t.footer}</p><a href="#top">${t.backTop}</a></footer>
       </div>
     </main>`;
-  document.querySelectorAll('[data-lang]').forEach(button => button.addEventListener('click', () => {
-    localStorage.setItem('linear-algebra-b1-lang', button.dataset.lang);
-    render(button.dataset.lang);
-  }));
 }
 
-render(localStorage.getItem('linear-algebra-b1-lang') === 'en' ? 'en' : 'zh');
+render();
