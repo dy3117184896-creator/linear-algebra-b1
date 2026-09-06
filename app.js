@@ -12,6 +12,7 @@ const copy = {
     announcementsTitle: '课程公告', announcementsKicker: 'Announcements',
     announcements: [
       ['09.01', '课程主页已上线', '讲义、作业与通知将随教学进度持续更新。'],
+    ],
     informationTitle: '课程信息', informationKicker: 'Course information',
     information: [
       ['助教', '江子恒 钱治文'],  ['上课时间', '周二 9：45–11：20<br>周四 07：50–09：25'], ['上课地点', '5403'],
