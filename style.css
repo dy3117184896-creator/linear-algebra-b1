@@ -186,3 +186,159 @@ footer a { color: var(--green); font-weight: 700; }
   html { scroll-behavior: auto; }
   * { transition: none !important; }
 }
+
+/* Reference books */
+.reference-section {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 100% 0, rgba(200, 227, 109, .18), transparent 34%),
+    var(--card);
+}
+.reference-section::after {
+  content: "A·v = λ·v";
+  position: absolute;
+  right: -20px;
+  top: 12px;
+  color: rgba(7, 95, 78, .045);
+  font: 500 5.4rem/1 Georgia, serif;
+  letter-spacing: -.06em;
+  pointer-events: none;
+}
+.reference-section > * { position: relative; z-index: 1; }
+.reference-section .section-heading { margin-bottom: 22px; }
+.reference-section .section-heading h2 small {
+  color: var(--muted);
+  font: 500 .82rem/1.4 Arial, "PingFang SC", "Microsoft YaHei", sans-serif;
+  letter-spacing: .04em;
+}
+.reference-note {
+  display: grid;
+  grid-template-columns: 96px 1fr;
+  gap: 20px;
+  align-items: start;
+  margin: 0 0 24px;
+  padding: 18px 20px;
+  border: 1px solid #dce2d4;
+  border-left: 5px solid var(--lime);
+  border-radius: 4px;
+  background: rgba(238, 243, 237, .72);
+}
+.reference-note span {
+  color: var(--green);
+  font-size: .74rem;
+  font-weight: 800;
+  letter-spacing: .1em;
+}
+.reference-note p { margin: 0; color: var(--muted); font-size: .87rem; }
+.book-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+.book-card {
+  min-height: 278px;
+  display: grid;
+  grid-template-columns: 58px minmax(0, 1fr);
+  gap: 22px;
+  padding: 26px;
+  border: 1px solid var(--line);
+  border-radius: 5px;
+  background: rgba(246, 245, 239, .92);
+  transition: transform .2s ease, border-color .2s ease, box-shadow .2s ease;
+}
+.book-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(7, 95, 78, .7);
+  box-shadow: 0 16px 32px rgba(20, 35, 31, .09);
+}
+.book-number {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+  padding-right: 18px;
+  border-right: 1px solid var(--line);
+}
+.book-number span { color: var(--green); font: italic 1.45rem/1 Georgia, serif; }
+.book-number small {
+  color: #8a9791;
+  font-size: .68rem;
+  font-weight: 700;
+  letter-spacing: .12em;
+  writing-mode: vertical-rl;
+}
+.book-content { min-width: 0; }
+.book-title {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+}
+.book-title > span {
+  font: 600 1.24rem/1.28 Georgia, "Songti SC", SimSun, serif;
+  overflow-wrap: anywhere;
+}
+.book-title b {
+  flex: 0 0 auto;
+  padding: 5px 9px;
+  border-radius: 999px;
+  color: var(--green-dark);
+  background: var(--lime);
+  font-size: .66rem;
+  letter-spacing: .06em;
+}
+.book-title:hover > span { color: var(--green); text-decoration: underline; text-underline-offset: 4px; }
+.book-meta { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin: 10px 0 14px; color: var(--green); font-size: .74rem; }
+.book-meta i { width: 3px; height: 3px; border-radius: 50%; background: #9aa49f; }
+.book-content > p { margin: 0; color: var(--muted); font-size: .84rem; line-height: 1.78; }
+.book-content blockquote {
+  margin: 16px 0 0;
+  padding: 10px 13px;
+  border-left: 3px solid var(--green);
+  color: var(--green-dark);
+  background: #edf2eb;
+  font: italic .85rem/1.65 Georgia, "Songti SC", serif;
+}
+.book-extra {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 16px;
+  color: var(--green);
+  font-size: .76rem;
+  font-weight: 700;
+  overflow-wrap: anywhere;
+}
+.book-extra span { width: 24px; height: 24px; display: grid; place-items: center; border: 1px solid var(--line); border-radius: 50%; font-size: .66rem; }
+.book-extra:hover { text-decoration: underline; text-underline-offset: 3px; }
+.reference-video {
+  display: grid;
+  grid-template-columns: 54px 1fr auto;
+  gap: 18px;
+  align-items: center;
+  margin-top: 16px;
+  padding: 24px 26px;
+  border-radius: 5px;
+  color: #f6f3e9;
+  background: linear-gradient(120deg, var(--green-dark), #08715c);
+  box-shadow: 0 12px 28px rgba(6, 72, 61, .18);
+}
+.video-mark { width: 46px; height: 46px; display: grid; place-items: center; border: 1px solid rgba(255,255,255,.45); border-radius: 50%; color: var(--lime); }
+.reference-video small { color: #bbd2c9; font-size: .68rem; letter-spacing: .15em; text-transform: uppercase; }
+.reference-video h3 { margin: 1px 0 0; font: 500 1.35rem/1.3 Georgia, "Songti SC", serif; }
+.reference-video p { margin: 3px 0 0; color: #cfdfd9; font-size: .78rem; }
+.reference-video > b { color: var(--lime); font-size: .75rem; letter-spacing: .04em; }
+.reference-video:hover { background: linear-gradient(120deg, #053e35, #086d59); }
+
+@media (max-width: 900px) {
+  .book-list { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 620px) {
+  .reference-section::after { font-size: 3.4rem; }
+  .reference-note { grid-template-columns: 1fr; gap: 6px; }
+  .book-card { display: block; min-height: 0; padding: 22px 20px; }
+  .book-number { flex-direction: row; justify-content: space-between; padding: 0 0 13px; margin-bottom: 16px; border-right: 0; border-bottom: 1px solid var(--line); }
+  .book-number small { writing-mode: horizontal-tb; }
+  .book-title { display: block; }
+  .book-title b { display: inline-block; margin-top: 10px; }
+  .reference-video { grid-template-columns: 46px 1fr; padding: 20px; }
+  .reference-video > b { grid-column: 2; }
+}
