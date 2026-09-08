@@ -16,8 +16,8 @@ const copy = {
     informationTitle: '课程信息', informationKicker: 'Course information',
     information: [
       ['助教', '江子恒 钱治文'], ['上课时间', '周二 9：45–11：20<br>周四 07：50–09：25'], ['上课地点', '5403'],
-      ['答疑时间', '待更新'], ['参考教材', '《线性代数》及课堂指定参考资料'],
-      ['考核方式', '平时成绩、期中考试与期末考试（比例待定）'],
+      ['答疑时间', '待更新'], ['参考教材', '<a href="linear-algebra-1-textbook.pdf" target="_blank" rel="noopener">线性代数Ⅰ 陈发来 王新茂 陈效群 李思敏</a><br><small style="font-weight:400;display:inline-block;margin-top:0.35rem;">电子版课本和实际可能有出入，以纸质的课本为准</small>'],
+      ['考核方式', '平时：期中：期末 = 2：3：5（暂定）'],
     ],
     scheduleTitle: '教学安排', scheduleKicker: 'Weekly schedule',
     scheduleIntro: '以下为课程框架，具体进度将在开课后根据课堂实际情况调整。',
