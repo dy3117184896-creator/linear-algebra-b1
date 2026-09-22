@@ -4,7 +4,7 @@ const copy = {
     eyebrow: '2026 秋季学期 · 课程主页',
     title: '线性代数 B1',
     subtitle: '从线性方程组出发，理解向量空间、线性映射与矩阵背后的统一结构。',
-    nav: ['课程公告', '课程信息', '参考书', '教学安排'],
+    nav: ['课程公告', '课程信息', '参考书', '教学安排', '课程资料'],
     facts: [
       ['上课时间', '周二 9：45 – 11：20<br>周四 7：50 – 9：25'],
       ['上课地点', '5403'],
@@ -74,6 +74,11 @@ const copy = {
     scheduleTitle: '教学安排', scheduleKicker: 'Weekly schedule',
     scheduleIntro: '以下为课程框架，具体进度将在开课后根据课堂实际情况调整。',
     headers: ['周次', '主题', '学习重点', '习题课'],
+    materialsTitle: '课程资料', materialsKicker: 'Course materials',
+    materialsDescription: '这里是助教在网上搜集到的一些课程资料，目前更新了往年卷，之后还会不定期更新一些东西。',
+    materialsFile: 'linear-algebra-past-exams.zip',
+    materialsFileTitle: '线性代数往年卷',
+    materialsFileMeta: 'ZIP 压缩包 · 6.04 MB',
     footer: '线性代数 B1 · 2026 秋季学期', backTop: '回到顶部 ↑',
     update: '最近更新：2026 年 9 月 21 日',
   },
@@ -96,7 +101,7 @@ const weeks = [
   },
 ];
 
-const ids = ['announcements', 'information', 'references', 'schedule'];
+const ids = ['announcements', 'information', 'references', 'schedule', 'materials'];
 const heading = (kicker, title) => `<div class="section-heading"><span class="section-index" aria-hidden="true"></span><div><p>${kicker}</p><h2>${title}</h2></div></div>`;
 
 function render() {
@@ -162,6 +167,15 @@ function render() {
           <div class="section-title-row">${heading(t.scheduleKicker, t.scheduleTitle)}<p>${t.scheduleIntro}</p></div>
           <div class="table-wrap"><table><thead><tr>${t.headers.map(h => `<th>${h}</th>`).join('')}</tr></thead>
           <tbody>${weeks.map(week => `<tr><td><b>${week.number}</b><span>${week.label}</span></td><td>${week.topic}</td><td>${week.focus}</td><td>${week.recitation}</td></tr>`).join('')}</tbody></table></div>
+        </section>
+        <section id="materials" class="section-card materials-section">
+          ${heading(t.materialsKicker, t.materialsTitle)}
+          <p class="materials-intro">${t.materialsDescription}</p>
+          <a class="materials-download" href="${t.materialsFile}" download>
+            <span class="materials-mark" aria-hidden="true">ZIP</span>
+            <div><small>往年试卷</small><h3>${t.materialsFileTitle}</h3><p>${t.materialsFileMeta}</p></div>
+            <b>下载压缩包 ↓</b>
+          </a>
         </section>
         <footer><p>${t.footer}</p><a href="#top">${t.backTop}</a></footer>
       </div>
